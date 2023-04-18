@@ -5,9 +5,13 @@ const http = axios.create({
   timeout: 5000
 })
 
+const token = localStorage.getItem('token')
 // 添加请求拦截器
 http.interceptors.request.use(
   function (config) {
+    if (token) {
+      config.headers.token = token
+    }
     // 在发送请求之前做些什么
     return config
   },

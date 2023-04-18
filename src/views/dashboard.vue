@@ -1,14 +1,15 @@
 <template>
-  <div class="home">
-    <homeleftson class="left"></homeleftson>
-    <homerightson class="right"></homerightson>
+  <div class="dashboard">
+    <el-breadcrumb separator="/">
+      <el-breadcrumb-item :to="{ path: '/' }">主页面</el-breadcrumb-item>
+    </el-breadcrumb>
+    <br />
+    <h1>欢迎登录首页</h1>
   </div>
 </template>
 
 <script setup>
 import { useRouter, useRoute } from 'vue-router'
-import homeleftson from '@/components/Home_leftSon.vue'
-import homerightson from '@/components/Home_rightSon.vue'
 import { useStore } from 'vuex'
 import {
   ref,
@@ -37,16 +38,6 @@ const emit = defineEmits({})
 </script>
 
 <style lang="scss" scoped>
-.home {
-  display: flex;
-  .left {
-    width: 200px;
-    height: 100vh;
-    background-color: #304156;
-  }
-  .right {
-    width: 80%;
-    height: 100vh;
-  }
+.sysUserList {
 }
 </style>

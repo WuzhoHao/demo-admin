@@ -15,7 +15,11 @@
             <el-input v-model="ruleForm.username" placeholder="请输入用户名" />
           </el-form-item>
           <el-form-item prop="password">
-            <el-input v-model="ruleForm.password" placeholder="请输入密码" />
+            <el-input
+              v-model="ruleForm.password"
+              placeholder="请输入密码"
+              show-password
+            />
           </el-form-item>
           <el-form-item prop="userType">
             <el-radio-group v-model="ruleForm.userType">
